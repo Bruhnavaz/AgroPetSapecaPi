@@ -30,7 +30,6 @@ public class CadastroForn extends JFrame {
 	private JTextField txtNumero;
 	private JTextField txtComplemento;
 	
-
 	/**
 	 * Launch the application.
 	 */
