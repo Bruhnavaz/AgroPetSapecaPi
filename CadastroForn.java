@@ -29,7 +29,7 @@ public class CadastroForn extends JFrame {
 	private JTextField txtCidade;
 	private JTextField txtNumero;
 	private JTextField txtComplemento;
-
+	
 	/**
 	 * Launch the application.
 	 */
