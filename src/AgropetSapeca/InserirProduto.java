@@ -1,4 +1,7 @@
 package AgropetSapeca;
+/*
+ * carregando o BD
+ */
 
 public class InserirProduto {
 
@@ -7,7 +10,7 @@ ProdutoDAo dao = new ProdutoDAo();
 		
 		Produto p = new Produto();
 		p.setIdProduto("1");
-		p.setNome("Magnus adulto raças pequenas");
+		p.setNome("Magnus_adulto");
 		p.setFabricante("Magnus");
 		p.setCusto(10);
 		p.setLotes("A1");

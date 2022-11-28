@@ -12,7 +12,7 @@ public class ProdutoDAo {
 	}
 	
 	public String inserir(Produto p) {
-		sql = "insert into produtos values (?,?,?,?,?,?,?,?,?,?)";
+		sql = "insert into PRODUTO values (?,?,?,?,?,?,?,?,?,?)";
 		bd.getConnection();
 		try {
 			bd.st = bd.con.prepareStatement(sql);
