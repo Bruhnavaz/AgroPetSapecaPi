@@ -21,7 +21,7 @@ public class ProdutoDAo {
 			//bd.st.setDouble(3, p.getPreco());
 			//
 			
-			bd.st.setInt(4, p.getEstoque());
+			bd.st.setFloat(4, p.getEstoqueSeguranca());
 			bd.st.executeUpdate();
 			men = "produto inserido com sucesso";
 		}

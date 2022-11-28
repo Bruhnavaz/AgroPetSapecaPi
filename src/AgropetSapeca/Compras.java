@@ -8,35 +8,49 @@ public class Compras {
 	 * determinando os atributos da classe Compras
 	 */
 
-	private int numeroPedido;
-	private int requisicao;
-	private float precos;
-	private String idFornecedor;
+	private String numero_do_pedido;
+	private String nota_fiscal;
+	private String forma_pagamento;
+	private float frete;
+	private float preco;
+	private String cnpj_fornecdor;
 	private Date dataCompra;
 	
-	public int getNumeroPedido() {
-		return numeroPedido;
+	public String getNumero_do_pedido() {
+		return numero_do_pedido;
 	}
-	public void setNumeroPedido(int numeroPedido) {
-		this.numeroPedido = numeroPedido;
+	public void setNumero_do_pedido(String numero_do_pedido) {
+		this.numero_do_pedido = numero_do_pedido;
 	}
-	public int getRequisicao() {
-		return requisicao;
+	public String getNota_fiscal() {
+		return nota_fiscal;
 	}
-	public void setRequisicao(int requisicao) {
-		this.requisicao = requisicao;
+	public void setNota_fiscal(String nota_fiscal) {
+		this.nota_fiscal = nota_fiscal;
 	}
-	public float getPrecos() {
-		return precos;
+	public String getForma_pagamento() {
+		return forma_pagamento;
 	}
-	public void setPrecos(float precos) {
-		this.precos = precos;
+	public void setForma_pagamento(String forma_pagamento) {
+		this.forma_pagamento = forma_pagamento;
 	}
-	public String getIdFornecedor() {
-		return idFornecedor;
+	public float getFrete() {
+		return frete;
 	}
-	public void setIdFornecedor(String idFornecedor) {
-		this.idFornecedor = idFornecedor;
+	public void setFrete(float frete) {
+		this.frete = frete;
+	}
+	public float getPreco() {
+		return preco;
+	}
+	public void setPreco(float preco) {
+		this.preco = preco;
+	}
+	public String getCnpj_fornecdor() {
+		return cnpj_fornecdor;
+	}
+	public void setCnpj_fornecdor(String cnpj_fornecdor) {
+		this.cnpj_fornecdor = cnpj_fornecdor;
 	}
 	public Date getDataCompra() {
 		return dataCompra;
@@ -45,6 +59,6 @@ public class Compras {
 		this.dataCompra = dataCompra;
 	}
 	
-	
-	
 }
+	
+	

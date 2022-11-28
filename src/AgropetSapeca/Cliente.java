@@ -4,8 +4,10 @@ public class Cliente {
 
 	private String cpf;
 	private String nome;
-	private String endereço;
-	private String telefone;
+	private String endereco;
+	private String estado;
+	private String cidade;
+	private int telefone;
 	private String email;
 	
 	public String getCpf() {
@@ -20,16 +22,28 @@ public class Cliente {
 	public void setNome(String nome) {
 		this.nome = nome;
 	}
-	public String getEndereço() {
-		return endereço;
+	public String getEndereco() {
+		return endereco;
 	}
-	public void setEndereço(String endereço) {
-		this.endereço = endereço;
+	public void setEndereco(String endereco) {
+		this.endereco = endereco;
 	}
-	public String getTelefone() {
+	public String getEstado() {
+		return estado;
+	}
+	public void setEstado(String estado) {
+		this.estado = estado;
+	}
+	public String getCidade() {
+		return cidade;
+	}
+	public void setCidade(String cidade) {
+		this.cidade = cidade;
+	}
+	public int getTelefone() {
 		return telefone;
 	}
-	public void setTelefone(String telefone) {
+	public void setTelefone(int telefone) {
 		this.telefone = telefone;
 	}
 	public String getEmail() {
@@ -38,4 +52,6 @@ public class Cliente {
 	public void setEmail(String email) {
 		this.email = email;
 	}
+	
+	
 }

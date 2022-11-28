@@ -8,16 +8,16 @@ public class Lote {
 	 * Determinando os atributos da classe Lote
 	 */
 	
-	private int lote;
+	private int id_lote;
 	private Date dataAquisicao;
 	private Date dataValidade;
 	private float quantidade;
 	
 	public int getLote() {
-		return lote;
+		return id_lote;
 	}
 	public void setLote(int lote) {
-		this.lote = lote;
+		this.id_lote = lote;
 	}
 	public Date getDataAquisicao() {
 		return dataAquisicao;
