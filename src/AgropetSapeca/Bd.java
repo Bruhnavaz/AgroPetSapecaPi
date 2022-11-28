@@ -11,11 +11,11 @@ public class Bd {
 	public PreparedStatement st = null;
 	public ResultSet rs = null;
 	
-	private  final String DRIVER = "com.microsoft.sqlserver.jdbc.SQLServerDriver";
-	private final String BANCO = "java";
-	private  final String URL = "jdbc:sqlserver://localhost:1433;databasename= "+BANCO;
-	private  final String LOGIN = "sa";
-	private  final String SENHA = "123456";
+	private final String DRIVER = "com.microsoft.sqlserver.jdbc.SQLServerDriver";
+	private final String BANCO = "JAVA";
+	private final String URL = "jdbc:sqlserver://localhost:1433;databasename= "+BANCO;
+	private final String LOGIN = "sa";
+	private final String SENHA = "123456";
 	
 	public boolean getConnection() {
 		try {

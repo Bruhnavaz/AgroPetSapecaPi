@@ -12,14 +12,21 @@ public class ProdutoDAo {
 	}
 	
 	public String inserir(Produto p) {
-		sql = "insert into produtos values (?,?,?,?)";
+		sql = "insert into produtos values (?,?,?,?,?,?,?,?,?,?)";
 		bd.getConnection();
 		try {
-			//bd.st = bd.con.prepareStatement(sql);
-			//bd.st.setInt(1, p.getCodigo());
-			//bd.st.setString(2, p.getNome());
-			//bd.st.setDouble(3, p.getPreco());
-			//bd.st.setInt(4, p.getEstoque());
+			bd.st = bd.con.prepareStatement(sql);
+			bd.st.setString(1, p.getIdProduto());
+			bd.st.setString(2, p.getNome());
+			bd.st.setString(3, p.getFabricante());
+			bd.st.setFloat(4, p.getCusto());
+			bd.st.setString(5, p.getLotes());
+			bd.st.setString(6, p.getCategoria());
+			bd.st.setString(7, p.getTipoDePublico());
+			bd.st.setFloat(8, p.getQuantidadeTotal());
+			bd.st.setFloat(9, p.getQuantidadeMin());
+			bd.st.setFloat(10, p.getEstoqueSeguranca());
+			
 			bd.st.executeUpdate();
 			men = "produto inserido com sucesso";
 		}
