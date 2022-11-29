@@ -2,6 +2,7 @@ package AgropetSapeca;
 
 public class Produto {
 	
+<<<<<<< HEAD
 	private String idProduto;
 	private String nome;
 	private String fabricante;
@@ -22,6 +23,27 @@ public class Produto {
 	}
 	public void setIdProduto(String idProduto) {
 		this.idProduto = idProduto;
+=======
+	/*
+	 * determinando os atributos da classe produto
+	 */
+	
+	private String id_produto;
+	private String nome;
+	private String fabricante;
+	private float custo;//calculado
+	private String lotes;
+	private String categoria;
+	private String tipoPublico;// cachorro, gato, coelho
+	private float quantidade_total;
+	private float qtdMinima;
+	private float estoqueSeguranca;
+	public String getId_produto() {
+		return id_produto;
+	}
+	public void setId_produto(String id_produto) {
+		this.id_produto = id_produto;
+>>>>>>> f33ab214892e05464db6a59347bf96479c82e699
 	}
 	public String getNome() {
 		return nome;
@@ -53,6 +75,7 @@ public class Produto {
 	public void setCategoria(String categoria) {
 		this.categoria = categoria;
 	}
+<<<<<<< HEAD
 	public String getTipoDePublico() {
 		return tipoDePublico;
 	}
@@ -70,6 +93,25 @@ public class Produto {
 	}
 	public void setQuantidadeMin(float quantidadeMin) {
 		this.quantidadeMin = quantidadeMin;
+=======
+	public String getTipoPublico() {
+		return tipoPublico;
+	}
+	public void setTipoPublico(String tipoPublico) {
+		this.tipoPublico = tipoPublico;
+	}
+	public float getQuantidade_total() {
+		return quantidade_total;
+	}
+	public void setQuantidade_total(float quantidade_total) {
+		this.quantidade_total = quantidade_total;
+	}
+	public float getQtdMinima() {
+		return qtdMinima;
+	}
+	public void setQtdMinima(float qtdMinima) {
+		this.qtdMinima = qtdMinima;
+>>>>>>> f33ab214892e05464db6a59347bf96479c82e699
 	}
 	public float getEstoqueSeguranca() {
 		return estoqueSeguranca;
@@ -77,6 +119,7 @@ public class Produto {
 	public void setEstoqueSeguranca(float estoqueSeguranca) {
 		this.estoqueSeguranca = estoqueSeguranca;
 	}
+<<<<<<< HEAD
 	@Override
 	public String toString() {
 		return "Produto [idProduto=" + idProduto + ", nome=" + nome + ", fabricante=" + fabricante + ", custo=" + custo
@@ -84,6 +127,8 @@ public class Produto {
 				+ ", quantidadeTotal=" + quantidadeTotal + ", quantidadeMin=" + quantidadeMin + ", estoqueSeguranca="
 				+ estoqueSeguranca + "]";
 	}
+=======
+>>>>>>> f33ab214892e05464db6a59347bf96479c82e699
 	
 	
 

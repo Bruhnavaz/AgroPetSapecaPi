@@ -15,6 +15,7 @@ public class ProdutoDAo {
 		sql = "insert into PRODUTO values (?,?,?,?,?,?,?,?,?,?)";
 		bd.getConnection();
 		try {
+<<<<<<< HEAD
 			bd.st = bd.con.prepareStatement(sql);
 			bd.st.setString(1, p.getIdProduto());
 			bd.st.setString(2, p.getNome());
@@ -27,6 +28,15 @@ public class ProdutoDAo {
 			bd.st.setFloat(9, p.getQuantidadeMin());
 			bd.st.setFloat(10, p.getEstoqueSeguranca());
 			
+=======
+			//bd.st = bd.con.prepareStatement(sql);
+			//bd.st.setInt(1, p.getCodigo());
+			//bd.st.setString(2, p.getNome());
+			//bd.st.setDouble(3, p.getPreco());
+			//
+			
+			bd.st.setFloat(4, p.getEstoqueSeguranca());
+>>>>>>> f33ab214892e05464db6a59347bf96479c82e699
 			bd.st.executeUpdate();
 			men = "produto inserido com sucesso";
 		}
