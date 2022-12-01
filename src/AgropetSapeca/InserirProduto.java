@@ -1,25 +1,22 @@
 package AgropetSapeca;
 /*
- * carregando o BD
+ * carregando o BD para inserir produto novo
  */
 
 public class InserirProduto {
 
 	public static void main(String[] args) {
-ProdutoDAo dao = new ProdutoDAo();
+		ProdutoDAo dao = new ProdutoDAo();
 		
 		Produto p = new Produto();
-		p.setIdProduto("1");
-		p.setNome("Magnus_adulto");
-		p.setFabricante("Magnus");
-		p.setCusto(10);
-		p.setLotes("A1");
+		p.setId_produto("3");
+		p.setNome("Pedigre filhote");
+		p.setFabricante("Pedigree");
+		p.setCusto(11);
+		p.setLotes("A3");
 		p.setCategoria("Ração animal");
-		p.setTipoDePublico("Cachorro");
-		p.setQuantidadeTotal(10);
-		p.setQuantidadeMin(5);		
-		p.setEstoqueSeguranca(7);
-		
+		p.setTipoPublico("Gato");		
+				
 		System.out.println(dao.inserir(p));
 
 	}

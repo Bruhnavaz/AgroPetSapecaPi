@@ -16,13 +16,13 @@ public class PetDAo {
 	}
 	
 	public String inserir(Pet p) {
-		sql = "insert into pet values (?,?,?,?,?,?,?)";
+		sql = "insert into PET (ID_PET, NOME_PET, DATA_DE_NASCIMNTO, SEXO, TIPO, PORTE) values (?,?,?,?,?,?)";
 		bd.getConnection();
 		try {
 			bd.st = bd.con.prepareStatement(sql);
 			bd.st.setString(1, p.getId_pet());
 			bd.st.setString(2, p.getNomePet());
-			bd.st.setDate(3, p.getDataNascimentoPet());
+			bd.st.setString(3, p.getDataNascimentoPet());
 			bd.st.setString(4, p.getSexo());
 			bd.st.setString(5, p.getPorte());
 			bd.st.setString(6, p.getTipo());
@@ -43,14 +43,13 @@ public class PetDAo {
 	}
 	public String alterar(Pet p) {
 
-		sql = "update pet set nome_pet=?,data_de_nascimento=?,sexo=?,porte=?,tipo=?,cpf=? where id_pet=?";
+		sql = "update pet set nome_pet=?,data_de_nascimnto=?,sexo=?,porte=?,tipo=? where id_pet=?";
 		bd.getConnection();
 		try {
 			bd.st = bd.con.prepareStatement(sql);
-			bd.st = bd.con.prepareStatement(sql);
-			bd.st.setString(7, p.getId_pet());
+			bd.st.setString(6, p.getId_pet());
 			bd.st.setString(1, p.getNomePet());
-			bd.st.setDate(2, p.getDataNascimentoPet());
+			bd.st.setString(2, p.getDataNascimentoPet());
 			bd.st.setString(3, p.getSexo());
 			bd.st.setString(4, p.getPorte());
 			bd.st.setString(5, p.getTipo());
@@ -78,7 +77,7 @@ public class PetDAo {
 	}
 	public String excluir(String codigo) {
 
-		sql = "delete from petwhere codigo=?";
+		sql = "delete from pet where id_pet=?";
 		bd.getConnection();
 		try {
 			bd.st = bd.con.prepareStatement(sql);

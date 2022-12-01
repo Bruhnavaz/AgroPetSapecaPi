@@ -1,10 +1,10 @@
 package AgropetSapeca;
 
-public class requisicao {
+public class Requisicao {
 	private String requisicao;
 	private String id_produto;
 	private String numero_do_pedido;
-	private int quantidade;
+	private double quantidade;
 	private String id_lote;
 	
 	
@@ -26,10 +26,10 @@ public class requisicao {
 	public void setNumero_do_pedido(String numero_do_pedido) {
 		this.numero_do_pedido = numero_do_pedido;
 	}
-	public int getQuantidade() {
+	public double getQuantidade() {
 		return quantidade;
 	}
-	public void setQuantidade(int quantidade) {
+	public void setQuantidade(double quantidade) {
 		this.quantidade = quantidade;
 	}
 	public String getId_lote() {

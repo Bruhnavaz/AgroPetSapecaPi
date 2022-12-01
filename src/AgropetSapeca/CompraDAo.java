@@ -1,10 +1,6 @@
 package AgropetSapeca;
 
 import java.sql.SQLException;
-import java.util.List;
-
-import AgropetSapeca.Cliente;
-import AgropetSapeca.Compras;
 
 public class CompraDAo {
 	private String sql, men;
@@ -14,20 +10,17 @@ public class CompraDAo {
 		bd = new Bd();
 	}
 	
-	public String inserir(Compras p) {
-		sql = "insert into compra values (?,?,?,?,?,?,?)";
+	public String inserir(Compras co) {
+		sql = "insert into COMPRA values (?,?,?,?,?,?)";
 		bd.getConnection();
 		try {
 			bd.st = bd.con.prepareStatement(sql);
-			bd.st.setString(1, p.getNumero_do_pedido());
-			bd.st.setString(2, p.getNota_fiscal());
-			bd.st.setString(3, p.getForma_pagamento());
-			bd.st.setFloat(4, p.getFrete());
-			bd.st.setFloat(5, p.getPreco());
-			bd.st.setString(6, p.getCnpj_fornecdor());
-			bd.st.setDate(7, p.getDataCompra());
-			
-			
+			bd.st.setString(1, co.getNumero_do_pedido());
+			bd.st.setString(2, co.getNota_fiscal());
+			bd.st.setString(3, co.getForma_pagamento());
+			bd.st.setDouble(4, co.getFrete());
+			bd.st.setDouble(5, co.getPreco());
+			bd.st.setString(6, co.getDataCompra());			
 			bd.st.executeUpdate();
 			men = "compra inserido com sucesso";
 		}
@@ -42,20 +35,20 @@ public class CompraDAo {
 ;
 		return men;
 	}
-	public String alterar(Compras p) {
+	public String alterar(Compras co) {
 
-		sql = "update compra set nota_fiscal=?,forma_pagamento=?,frete=?,preco=?,cnpj_fornecedor=?dataCompra=? where numero_do_pedido=?";
+		sql = "update COMPRA set nota_fiscal=?,forma_pagamento=?,frete=?,preco=?,cnpj_fornecedor=?dataCompra=? where numero_do_pedido=?";
 		bd.getConnection();
 		try {
 			bd.st = bd.con.prepareStatement(sql);
 			bd.st = bd.con.prepareStatement(sql);
-			bd.st.setString(7, p.getNumero_do_pedido());
-			bd.st.setString(1, p.getNota_fiscal());
-			bd.st.setString(2, p.getForma_pagamento());
-			bd.st.setFloat(3, p.getFrete());
-			bd.st.setFloat(4, p.getPreco());
-			bd.st.setString(5, p.getCnpj_fornecdor());
-			bd.st.setDate(6, p.getDataCompra());
+			bd.st.setString(7, co.getNumero_do_pedido());
+			bd.st.setString(1, co.getNota_fiscal());
+			bd.st.setString(2, co.getForma_pagamento());
+			bd.st.setDouble(3, co.getFrete());
+			bd.st.setDouble(4, co.getPreco());
+			bd.st.setString(5, co.getCnpj_fornecdor());
+			bd.st.setString(6, co.getDataCompra());
 			int pop = bd.st.executeUpdate();
 			if(pop>0) {
 			men = "compra alterada com sucesso";

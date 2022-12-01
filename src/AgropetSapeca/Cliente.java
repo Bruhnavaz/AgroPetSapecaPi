@@ -7,7 +7,7 @@ public class Cliente {
 	private String endereco;
 	private String estado;
 	private String cidade;
-	private int telefone;
+	private String telefone;
 	private String email;
 	
 	public String getCpf() {
@@ -40,10 +40,10 @@ public class Cliente {
 	public void setCidade(String cidade) {
 		this.cidade = cidade;
 	}
-	public int getTelefone() {
+	public String getTelefone() {
 		return telefone;
 	}
-	public void setTelefone(int telefone) {
+	public void setTelefone(String telefone) {
 		this.telefone = telefone;
 	}
 	public String getEmail() {

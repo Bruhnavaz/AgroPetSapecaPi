@@ -15,18 +15,18 @@ public class ClienteDAo {
 		bd = new Bd();
 	}
 	
-	public String inserir(Cliente p) {
+	public String inserir(Cliente c) {
 		sql = "insert into cliente values (?,?,?,?,?,?,?)";
 		bd.getConnection();
 		try {
 			bd.st = bd.con.prepareStatement(sql);
-			bd.st.setString(1, p.getCpf());
-			bd.st.setString(2, p.getNome());
-			bd.st.setString(3, p.getEndereco());
-			bd.st.setString(4, p.getEstado());
-			bd.st.setString(5, p.getCidade());
-			bd.st.setInt(6, p.getTelefone());
-            bd.st.setString(7, p.getEmail());
+			bd.st.setString(1, c.getCpf());
+			bd.st.setString(2, c.getNome());
+			bd.st.setString(3, c.getEndereco());
+			bd.st.setString(4, c.getEstado());
+			bd.st.setString(5, c.getCidade());
+			bd.st.setString(6, c.getTelefone());
+            bd.st.setString(7, c.getEmail());
 			
 			bd.st.executeUpdate();
 			men = "produto inserido com sucesso";
@@ -42,20 +42,19 @@ public class ClienteDAo {
 ;
 		return men;
 	}
-	public String alterar(Cliente p) {
+	public String alterar(Cliente c) {
 
 		sql = "update cliente set cpf=?,nome=?,endereco=?,estado=?,cidade=?,telefone=?,email=? where cpf=?";
 		bd.getConnection();
 		try {
 			bd.st = bd.con.prepareStatement(sql);
-			bd.st = bd.con.prepareStatement(sql);
-			bd.st.setString(7, p.getCpf());
-			bd.st.setString(1, p.getNome());
-			bd.st.setString(2, p.getEndereco());
-			bd.st.setString(3, p.getEstado());
-			bd.st.setString(4, p.getCidade());
-			bd.st.setInt(5, p.getTelefone());
-            bd.st.setString(5, p.getEmail());
+			bd.st.setString(7, c.getCpf());
+			bd.st.setString(1, c.getNome());
+			bd.st.setString(2, c.getEndereco());
+			bd.st.setString(3, c.getEstado());
+			bd.st.setString(4, c.getCidade());
+			bd.st.setString(5, c.getTelefone());
+            bd.st.setString(5, c.getEmail());
 			
 			int pop = bd.st.executeUpdate();
 			if(pop>0) {

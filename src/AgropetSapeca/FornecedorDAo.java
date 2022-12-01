@@ -15,7 +15,7 @@ public class FornecedorDAo {
 	}
 	
 	public String inserir(Forncedor p) {
-		sql = "insert fornecedor produto values (?,?,?,?,?,?,?,)";
+		sql = "insert into fornecedor values (?,?,?,?,?,?,?)";
 		bd.getConnection();
 		try {
 			bd.st = bd.con.prepareStatement(sql);
@@ -24,7 +24,7 @@ public class FornecedorDAo {
 			bd.st.setString(3, p.getEndereco_fornecedor());
 			bd.st.setString(4, p.getCidade_fornecedor());
 			bd.st.setString(5, p.getEstado_fornecedor());
-			bd.st.setInt(6, p.getTelefone_fornecedor());
+			bd.st.setString(6, p.getTelefone_fornecedor());
 			bd.st.setString(7, p.getEmail_fornecedor());
 			
 			bd.st.executeUpdate();
@@ -41,19 +41,19 @@ public class FornecedorDAo {
 ;
 		return men;
 	}
-	public String alterar(Forncedor p) {
+	public String alterar(Forncedor f) {
 
 		sql = "update fornecedor set nome_fornecedor=?,endereco_fornecedor=?,cidade_fornecedor=?,estado_fornecedor=?,telefone_fornecedor=?,email_fornecedor=? where cnpj_fornecedor=?";
 		bd.getConnection();
 		try {
 			bd.st = bd.con.prepareStatement(sql);
-			bd.st.setString(7, p.getCnpj_fornecedor());
-			bd.st.setString(1, p.getNome_fornecedor());
-			bd.st.setString(2, p.getEndereco_fornecedor());
-			bd.st.setString(3, p.getCidade_fornecedor());
-			bd.st.setString(4, p.getEstado_fornecedor());
-			bd.st.setInt(5, p.getTelefone_fornecedor());
-			bd.st.setString(6, p.getEmail_fornecedor());
+			bd.st.setString(7, f.getCnpj_fornecedor());
+			bd.st.setString(1, f.getNome_fornecedor());
+			bd.st.setString(2, f.getEndereco_fornecedor());
+			bd.st.setString(3, f.getCidade_fornecedor());
+			bd.st.setString(4, f.getEstado_fornecedor());
+			bd.st.setString(5, f.getTelefone_fornecedor());
+			bd.st.setString(6, f.getEmail_fornecedor());
 			int pop = bd.st.executeUpdate();
 			if(pop>0) {
 			men = "fornecedor alterado com sucesso";

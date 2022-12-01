@@ -8,33 +8,33 @@ public class Lote {
 	 * Determinando os atributos da classe Lote
 	 */
 	
-	private int id_lote;
-	private Date dataAquisicao;
-	private Date dataValidade;
-	private float quantidade;
+	private String id_lote;
+	private String dataAquisicao;
+	private String dataValidade;
+	private Double quantidade;
 	
-	public int getLote() {
+	public String getLote() {
 		return id_lote;
 	}
-	public void setLote(int lote) {
+	public void setLote(String lote) {
 		this.id_lote = lote;
 	}
-	public Date getDataAquisicao() {
+	public String getDataAquisicao() {
 		return dataAquisicao;
 	}
-	public void setDataAquisicao(Date dataAquisicao) {
+	public void setDataAquisicao(String dataAquisicao) {
 		this.dataAquisicao = dataAquisicao;
 	}
-	public Date getDataValidade() {
+	public String getDataValidade() {
 		return dataValidade;
 	}
-	public void setDataValidade(Date dataValidade) {
+	public void setDataValidade(String dataValidade) {
 		this.dataValidade = dataValidade;
 	}
-	public float getQuantidade() {
+	public double getQuantidade() {
 		return quantidade;
 	}
-	public void setQuantidade(float quantidade) {
+	public void setQuantidade(double quantidade) {
 		this.quantidade = quantidade;
 	}
 	

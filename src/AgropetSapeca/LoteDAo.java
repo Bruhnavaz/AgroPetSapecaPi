@@ -16,15 +16,15 @@ public class LoteDAo {
 		bd = new Bd();
 	}
 	
-	public String inserir(Lote p) {
+	public String inserir(Lote l) {
 		sql = "insert into lote values (?,?,?,?)";
 		bd.getConnection();
 		try {
 			bd.st = bd.con.prepareStatement(sql);
-			bd.st.setInt(1, p.getLote());
-			bd.st.setDate(2, p.getDataAquisicao());
-			bd.st.setDate(3, p.getDataValidade());
-			bd.st.setFloat(4, p.getQuantidade());
+			bd.st.setString(1, l.getLote());
+			bd.st.setString(2, l.getDataAquisicao());
+			bd.st.setString(3, l.getDataValidade());
+			bd.st.setDouble(4, l.getQuantidade());
 			
 			
 			bd.st.executeUpdate();
@@ -41,17 +41,16 @@ public class LoteDAo {
 ;
 		return men;
 	}
-	public String alterar(Lote p) {
+	public String alterar(Lote l) {
 
-		sql = "update lote set data_aquisicao=?,data_de_validade=? where id_lote=?";
+		sql = "update lote set data_aquisicao=?,data_de_validade=?, QUANTIDADE=? where id_lote=?";
 		bd.getConnection();
 		try {
 			bd.st = bd.con.prepareStatement(sql);
-			bd.st = bd.con.prepareStatement(sql);
-			bd.st.setInt(4, p.getLote());
-			bd.st.setDate(1, p.getDataAquisicao());
-			bd.st.setDate(2, p.getDataValidade());
-			bd.st.setFloat(3, p.getQuantidade());
+			bd.st.setString(4, l.getLote());
+			bd.st.setString(1, l.getDataAquisicao());
+			bd.st.setString(2, l.getDataValidade());
+			bd.st.setDouble(3, l.getQuantidade());
 			int pop = bd.st.executeUpdate();
 			if(pop>0) {
 			men = "lote alterado com sucesso";
@@ -75,7 +74,7 @@ public class LoteDAo {
 	}
 	public String excluir(String codigo) {
 
-		sql = "delete from lotewhere codigo=?";
+		sql = "delete from lote where id_lote=?";
 		bd.getConnection();
 		try {
 			bd.st = bd.con.prepareStatement(sql);

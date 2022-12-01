@@ -11,8 +11,9 @@ public class Forncedor {
 	private String endereco_fornecedor;
 	private String cidade_fornecedor;
 	private String estado_fornecedor;
-	private int telefone_fornecedor;
+	private String telefone_fornecedor;
 	private String email_fornecedor;
+	
 	public String getCnpj_fornecedor() {
 		return cnpj_fornecedor;
 	}
@@ -43,10 +44,10 @@ public class Forncedor {
 	public void setEstado_fornecedor(String estado_fornecedor) {
 		this.estado_fornecedor = estado_fornecedor;
 	}
-	public int getTelefone_fornecedor() {
+	public String getTelefone_fornecedor() {
 		return telefone_fornecedor;
 	}
-	public void setTelefone_fornecedor(int telefone_fornecedor) {
+	public void setTelefone_fornecedor(String telefone_fornecedor) {
 		this.telefone_fornecedor = telefone_fornecedor;
 	}
 	public String getEmail_fornecedor() {

@@ -4,17 +4,17 @@ import java.sql.SQLException;
 import java.util.List;
 
 import AgropetSapeca.Cliente;
-import AgropetSapeca.requisicao;
+import AgropetSapeca.Requisicao;
 
-public class requisicaoDAo {
+public class RequisicaoDAo {
 	private String sql, men;
 	private Bd bd;
-	public requisicaoDAo() {
+	public RequisicaoDAo() {
 		// TODO Auto-generated constructor stub
 		bd = new Bd();
 	}
 	
-	public String inserir(requisicao p) {
+	public String inserir(Requisicao p) {
 		sql = "insert into requisicao values (?,?,?,?,?)";
 		bd.getConnection();
 		try {
@@ -22,7 +22,7 @@ public class requisicaoDAo {
 			bd.st.setString(1, p.getRequisicao());
 			bd.st.setString(2, p.getId_produto());
 			bd.st.setString(3,p.getNumero_do_pedido());
-			bd.st.setInt(4, p.getQuantidade());
+			bd.st.setDouble(4, p.getQuantidade());
 			bd.st.setString(5, p.getId_lote());
 		
 			
@@ -41,17 +41,16 @@ public class requisicaoDAo {
 ;
 		return men;
 	}
-	public String alterar(requisicao p) {
+	public String alterar(Requisicao p) {
 
 		sql = "update requisicao set id_produto=?,numero_do_pedido=?,quantidade=?,id-lote=? where requisicao=? ";
 		bd.getConnection();
 		try {
 			bd.st = bd.con.prepareStatement(sql);
-			bd.st = bd.con.prepareStatement(sql);
 			bd.st.setString(5, p.getRequisicao());
 			bd.st.setString(1, p.getId_produto());
 			bd.st.setString(2,p.getNumero_do_pedido());
-			bd.st.setInt(3, p.getQuantidade());
+			bd.st.setDouble(3, p.getQuantidade());
 			bd.st.setString(4, p.getId_lote());
 			int pop = bd.st.executeUpdate();
 			if(pop>0) {
